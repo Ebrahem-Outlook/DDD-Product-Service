@@ -2,7 +2,7 @@
 
 namespace Product.Domain.Core.BaseType;
 
-public abstract class AggregateRoot : Entity
+public abstract class AggregateRoot : Entity, IAggregateRoot
 {
     protected AggregateRoot(Guid id) : base(id) { }
 
@@ -15,4 +15,13 @@ public abstract class AggregateRoot : Entity
     public void RaiseDomainEvent(IDomainEvent @event) => domainEvents.Add(@event);
 
     public void ClearDomainEvent() => domainEvents.Clear();
+}
+
+public interface IAggregateRoot
+{
+    IReadOnlyCollection<IDomainEvent> DomainEvents { get; }
+
+    void RaiseDomainEvent(IDomainEvent @event);
+
+    void ClearDomainEvent() ;
 }

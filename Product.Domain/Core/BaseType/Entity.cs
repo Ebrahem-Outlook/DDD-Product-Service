@@ -1,7 +1,6 @@
-﻿
-namespace Product.Domain.Core.BaseType;
+﻿namespace Product.Domain.Core.BaseType;
 
-public abstract class Entity : IEquatable<Entity?>
+public abstract class Entity : IEntity, IEquatable<Entity?>
 {
     protected Entity(Guid id) => Id = id;
 
@@ -34,4 +33,9 @@ public abstract class Entity : IEquatable<Entity?>
     {
         return !(left == right);
     }
+}
+
+public interface IEntity
+{
+    Guid Id { get; }
 }
