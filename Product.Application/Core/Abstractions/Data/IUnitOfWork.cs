@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Product.Application.Core.Abstractions.Data;
+namespace Products.Application.Core.Abstractions.Data;
 
 public interface IUnitOfWork
 {

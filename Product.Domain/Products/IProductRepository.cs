@@ -1,4 +1,4 @@
-﻿namespace Product.Domain.Products;
+﻿namespace Products.Domain.Products;
 
 public interface IProductRepository
 {
@@ -10,5 +10,5 @@ public interface IProductRepository
     // Queries.
     Task<List<Product>?> GetAllAsync(CancellationToken cancellationToken = default);
     Task<Product?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
-    Task<List<Product>?> GetByNameAsync(CancellationToken cancellationToken = default);
+    Task<List<Product>?> GetByNameAsync(string name, CancellationToken cancellationToken = default);
 }

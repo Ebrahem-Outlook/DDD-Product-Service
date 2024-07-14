@@ -1,6 +1,6 @@
-﻿using Product.Domain.Core.BaseType;
+﻿using Products.Domain.Core.BaseType;
 
-namespace Product.Domain.Products;
+namespace Products.Domain.Products;
 
 public sealed class Product : AggregateRoot
 {
@@ -37,6 +37,6 @@ public sealed class Product : AggregateRoot
         Price = price;
         Stock = stock;
 
-        
+
     }
 }

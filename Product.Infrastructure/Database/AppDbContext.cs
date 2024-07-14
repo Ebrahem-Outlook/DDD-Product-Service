@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using Product.Application.Core.Abstractions.Data;
-using Product.Domain.Core.BaseType;
+using Products.Application.Core.Abstractions.Data;
+using Products.Domain.Core.BaseType;
 
-namespace Product.Infrastructure.Database;
+namespace Products.Infrastructure.Database;
 
 public sealed class AppDbContext : DbContext, IDbContext, IUnitOfWork
 {

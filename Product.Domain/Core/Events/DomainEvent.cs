@@ -1,10 +1,10 @@
-﻿namespace Product.Domain.Core.Events;
+﻿namespace Products.Domain.Core.Events;
 
 public record DomainEvent : IDomainEvent
 {
     public DomainEvent()
     {
-        
+
         Id = Guid.NewGuid();
 
         OccuresOn = DateTime.Now;

@@ -1,4 +1,4 @@
-namespace Product.API;
+namespace Products.API;
 
 public class Program
 {

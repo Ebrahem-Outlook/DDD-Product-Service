@@ -1,4 +1,4 @@
-﻿namespace Product.Domain.Core.BaseType;
+﻿namespace Products.Domain.Core.BaseType;
 
 public abstract class ValueObject
 {

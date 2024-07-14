@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Product.Domain.Core.BaseType;
+using Products.Domain.Core.BaseType;
 
-namespace Product.Application.Core.Abstractions.Data;
+namespace Products.Application.Core.Abstractions.Data;
 
 public interface IDbContext
 {

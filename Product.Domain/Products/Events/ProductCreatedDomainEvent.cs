@@ -1,5 +1,5 @@
-﻿using Product.Domain.Core.Events;
+﻿using Products.Domain.Core.Events;
 
-namespace Product.Domain.Products.Events;
+namespace Products.Domain.Products.Events;
 
 public sealed record ProductCreatedDomainEvent(Product Product) : DomainEvent;

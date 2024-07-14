@@ -1,6 +1,6 @@
-﻿using Product.Domain.Core.Events;
+﻿using Products.Domain.Core.Events;
 
-namespace Product.Domain.Core.BaseType;
+namespace Products.Domain.Core.BaseType;
 
 public abstract class AggregateRoot : Entity, IAggregateRoot
 {
@@ -23,5 +23,5 @@ public interface IAggregateRoot
 
     void RaiseDomainEvent(IDomainEvent @event);
 
-    void ClearDomainEvent() ;
+    void ClearDomainEvent();
 }
