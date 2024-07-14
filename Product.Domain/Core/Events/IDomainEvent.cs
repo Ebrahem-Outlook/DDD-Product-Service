@@ -1,6 +1,9 @@
-﻿namespace Product.Domain.Core.Events
+﻿using MediatR;
+
+namespace Product.Domain.Core.Events;
+
+public interface IDomainEvent : INotification
 {
-    internal class IDomainEvent
-    {
-    }
+    Guid Id { get; }
+    DateTime OccuresOn { get; }
 }
