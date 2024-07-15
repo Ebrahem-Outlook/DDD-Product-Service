@@ -1,5 +1,3 @@
-New Product Service using C# and .Net and follow DDD and Clean architecture using postgres and destributed caching Redis and it is so simple
-
 ---
 
 # DDD-Product-Service
