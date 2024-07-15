@@ -14,16 +14,17 @@ internal sealed class CreateProductCommandHandler(IProductRepository repository)
         Result<Description> description = Description.Create(request.Name);
         Result<Price> price = Price.Create(request.Price);
         Result<Stock> stock = Stock.Create(request.Stock);
-        
+
+        Result firstFailureOrSuccess = Result.FirstFailureOrSuccess(name, description, price, stock);
+
+        if (firstFailureOrSuccess.IsFailer)
+        {
+            return Result.Failer(firstFailureOrSuccess.Error);
+        }
 
         Result<Product> product = Product.Create(name.Value, description.Value, price.Value, stock.Value);
 
-        if (product.IsFailer)
-        {
-            return Result.Failer(product.Error);
-        }
-
-        await repository.AddAsync(product.Value);
+        await repository.AddAsync(product.Value,cancellationToken);
 
         return Result.Success();
     }
