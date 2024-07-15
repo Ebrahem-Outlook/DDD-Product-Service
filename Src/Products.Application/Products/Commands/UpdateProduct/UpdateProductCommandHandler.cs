@@ -2,11 +2,13 @@
 using Products.Application.Core.Abstractions.Data;
 using Products.Application.Core.Abstractions.Messaging;
 using Products.Application.Products.Commands.DeleteProduct;
+using Products.Domain.Core.BaseType;
+using Products.Domain.Core.BaseType.Result;
 using Products.Domain.Products;
 
 namespace Products.Application.Products.Commands.UpdateProduct;
 
-internal sealed class UpdateProductCommandHandler : ICommandHandler<UpdateProductCommand, string>
+internal sealed class UpdateProductCommandHandler : ICommandHandler<UpdateProductCommand, Result>
 {
     private readonly IProductRepository _productRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -19,7 +21,7 @@ internal sealed class UpdateProductCommandHandler : ICommandHandler<UpdateProduc
         _logger = logger;
     }
 
-    public async Task<string> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
+    public async Task<Result> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
     {
         _logger.LogInformation("Starting request ... {@request} :: {DateTime}", typeof(DeleteProductCommand), DateTime.UtcNow);
 
@@ -31,7 +33,7 @@ internal sealed class UpdateProductCommandHandler : ICommandHandler<UpdateProduc
             {
                 _logger.LogError("Product with the spicified Id : {@ProductId} was not found {@DateTime}", request.ProductId, DateTime.UtcNow);
 
-                return "Failed";
+                return Result.Failer(new Error("Produce.NotFound", "Product with the spicified Id does not exsit."));
             }
 
             product.Update(request.Name, request.Description, request.Price, request.Stock);
@@ -42,13 +44,13 @@ internal sealed class UpdateProductCommandHandler : ICommandHandler<UpdateProduc
 
             _logger.LogInformation("Success request ... {@request} :: {DateTime}", typeof(DeleteProductCommand), DateTime.UtcNow);
 
-            return "Success";
+            return Result.Success();
         }
         catch (Exception)
         {
             _logger.LogError("Failed request ... {@request} :: {DateTime}", typeof(DeleteProductCommand), DateTime.UtcNow);
 
-            throw;
+            return Result.Failer(new Error("Produce.InHandleExciption", "Product throw InHandle Exciption dyreing Updating."));
         }
     }
 }

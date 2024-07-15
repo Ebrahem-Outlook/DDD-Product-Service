@@ -1,4 +1,5 @@
 ﻿using Products.Application.Core.Abstractions.Messaging;
+using Products.Domain.Core.BaseType.Result;
 
 namespace Products.Application.Products.Commands.UpdateProduct;
 
@@ -7,4 +8,4 @@ public sealed record UpdateProductCommand(
     string Name,
     string Description,
     decimal Price,
-    int Stock) : ICommand<string>;
+    int Stock) : ICommand<Result>;
