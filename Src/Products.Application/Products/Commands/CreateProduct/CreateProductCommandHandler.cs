@@ -1,48 +1,30 @@
-﻿using Microsoft.Extensions.Logging;
-using Products.Application.Core.Abstractions.Data;
-using Products.Application.Core.Abstractions.Messaging;
-using Products.Domain.Core.BaseType;
+﻿using Products.Application.Core.Abstractions.Messaging;
 using Products.Domain.Core.BaseType.Result;
 using Products.Domain.Products;
+using Products.Domain.Products.ValueObjects;
 
 namespace Products.Application.Products.Commands.CreateProduct;
 
-internal sealed class CreateProductCommandHandler : ICommandHandler<CreateProductCommand, Result>
+internal sealed class CreateProductCommandHandler(IProductRepository repository) 
+    : ICommandHandler<CreateProductCommand, Result>
 {
-    private readonly IProductRepository _productRepository;
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly Logger<CreateProductCommandHandler> _logger;
-
-    public CreateProductCommandHandler(IProductRepository productRepository, IUnitOfWork unitOfWork, Logger<CreateProductCommandHandler> logger)
-    {
-        _productRepository = productRepository;
-        _unitOfWork = unitOfWork;
-        _logger = logger;
-    }
-
     public async Task<Result> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Starting request ... {@request} :: {DateTime}", typeof(CreateProductCommand), DateTime.UtcNow);
+        Result<Name> name = Name.Create(request.Name);
+        Result<Description> description = Description.Create(request.Name);
+        Result<Price> price = Price.Create(request.Price);
+        Result<Stock> stock = Stock.Create(request.Stock);
+        
 
-        try
+        Result<Product> product = Product.Create(name.Value, description.Value, price.Value, stock.Value);
+
+        if (product.IsFailer)
         {
-            Product? product = Product.Create(request.Name, request.Description, request.Price, request.Stock);
-
-            await _productRepository.AddAsync(product, cancellationToken);
-
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-            _logger.LogInformation("Success request ... {@request} :: {DateTime}", typeof(CreateProductCommand), DateTime.UtcNow);
-
-            return Result.Success();
+            return Result.Failer(product.Error);
         }
-        catch(Exception)
-        {
-            _logger.LogError("Failed request ... {@request} :: {DateTime}", typeof(CreateProductCommand), DateTime.UtcNow);
 
-            return Result.Failer(new Error("Produce.InHandleExciption", "Product throw InHandle Exciption dyreing creating."));
+        await repository.AddAsync(product.Value);
 
-            throw;
-        }
+        return Result.Success();
     }
 }
