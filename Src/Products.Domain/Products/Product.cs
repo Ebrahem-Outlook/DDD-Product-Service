@@ -1,4 +1,5 @@
 ﻿using Products.Domain.Core.BaseType;
+using Products.Domain.Products.Events;
 
 namespace Products.Domain.Products;
 
@@ -27,6 +28,8 @@ public sealed class Product : AggregateRoot
     {
         Product product = new Product(name, description, price, stock);
 
+        product.RaiseDomainEvent(new ProductCreatedDomainEvent(product));
+
         return product;
     }
 
@@ -37,6 +40,6 @@ public sealed class Product : AggregateRoot
         Price = price;
         Stock = stock;
 
-
+        RaiseDomainEvent(new ProductUpdatedDomainEvent(this));
     }
 }
