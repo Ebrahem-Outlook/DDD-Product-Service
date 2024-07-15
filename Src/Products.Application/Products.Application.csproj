@@ -14,4 +14,16 @@
     <ProjectReference Include="..\Products.Domain\Products.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Products\Commands\CreateProduct\" />
+    <Folder Include="Products\Commands\DeleteProduct\" />
+    <Folder Include="Products\Commands\UpdateProduct\" />
+    <Folder Include="Products\Events\ProductDeleted\" />
+    <Folder Include="Products\Events\ProductUpdated\" />
+    <Folder Include="Products\Events\ProductCreated\" />
+    <Folder Include="Products\Queries\GetAll\" />
+    <Folder Include="Products\Queries\GetById\" />
+    <Folder Include="Products\Queries\GetByName\" />
+  </ItemGroup>
+
 </Project>
