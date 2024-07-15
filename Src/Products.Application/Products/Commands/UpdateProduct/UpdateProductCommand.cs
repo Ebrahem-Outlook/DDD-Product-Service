@@ -1,19 +1,10 @@
-﻿using Microsoft.Extensions.Logging;
-using Products.Application.Core.Abstractions.Data;
-using Products.Application.Core.Abstractions.Messaging;
-using Products.Domain.Products;
+﻿using Products.Application.Core.Abstractions.Messaging;
 
 namespace Products.Application.Products.Commands.UpdateProduct;
 
 public sealed record UpdateProductCommand(
+    Guid ProductId,
     string Name,
     string Description,
     decimal Price,
     int Stock) : ICommand<string>;
-
-internal sealed class UpdateProductCommandHandler : ICommandHandler<UpdateProductCommand, string>
-{
-    private readonly IProductRepository _productRepository;
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly ILogger<UpdateProductCommandHandler> _logger;
-}
