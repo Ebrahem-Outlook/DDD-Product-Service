@@ -23,7 +23,7 @@
 Welcome to the **DDD Product Service**! This project showcases the implementation of a product service using Domain-Driven Design (DDD) principles. It's designed to demonstrate best practices in building resilient, scalable, and maintainable systems with C# and the .NET ecosystem.
 
 <p align="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS92oC409Ab8igYS2P9a80P-ma2horU_w3A1xcR4R3Z3aHjND_F /">
+  <img src="https://designerapp.officeapps.live.com/designerapp/document.ashx?path=/8b72a13f-210f-4f9a-9218-07e459508d63/DallEGeneratedImages/dalle-8007be23-4dc1-4665-9c85-40a848306c840251681194812264402100.jpg&dcHint=WestEurope&fileToken=5eadfd88-5279-47c0-a1bd-75077323f4eb /">
 </p>
 
 ## Features ✨
