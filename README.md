@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTiRZjVsV79htEwOWMivbWYyP3_gQQPMqI-9CO1K6D2H7MHqHTT"/>
+  <img src="https://designerapp.officeapps.live.com/designerapp/document.ashx?path=/8b72a13f-210f-4f9a-9218-07e459508d63/DallEGeneratedImages/dalle-5f69e0e3-88fe-4285-a990-7b72828892650251681194812280030000.jpg&dcHint=WestEurope&fileToken=5eadfd88-5279-47c0-a1bd-75077323f4eb"/>
 </p>
 
 ## Table of Contents
