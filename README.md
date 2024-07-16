@@ -6,7 +6,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Project+Banner" alt="Project Banner">
+  <img src="https://images.unsplash.com/photo-1581092580340-b849e4e18eeb" alt="Project Banner" width="800" height="400">
 </p>
 
 ## Table of Contents
@@ -26,7 +26,7 @@
 Welcome to the **DDD Product Service**! This project showcases the implementation of a product service using Domain-Driven Design (DDD) principles. It's designed to demonstrate best practices in building resilient, scalable, and maintainable systems with C# and the .NET ecosystem.
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=Introduction+Image" alt="Introduction Image">
+  <img src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5" alt="Introduction Image" width="600" height="300">
 </p>
 
 ## Features ✨
@@ -91,7 +91,7 @@ Welcome to the **DDD Product Service**! This project showcases the implementatio
     ```
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=Setup+Image" alt="Setup Image">
+  <img src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5" alt="Setup Image" width="600" height="300">
 </p>
 
 ## Usage 📦
@@ -102,7 +102,7 @@ To run the tests, use the following command:
 ```bash
 dotnet test
 <p align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=Tests+Image" alt="Tests Image">
+  <img src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5" alt="Tests Image" width="600" height="300">
 </p>
 Contributing 🤝
 Contributions are welcome! Please read the contributing guidelines for more details.
@@ -114,5 +114,5 @@ Contact 📬
 Ebrahem Mohamed - LinkedIn - Email
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=Contact+Image" alt="Contact Image">
+  <img src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5" alt="Contact Image" width="600" height="300">
 </p>
