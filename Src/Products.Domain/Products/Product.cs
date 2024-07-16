@@ -8,7 +8,7 @@ public sealed class Product : AggregateRoot
 {
     private Product() : base() { }
 
-    public Product(Name name, Description description, Price price, Stock stock) : base(Guid.NewGuid())
+    private Product(Name name, Description description, Price price, Stock stock) : base(Guid.NewGuid())
     {
         Name = name;
         Description = description;
@@ -40,6 +40,7 @@ public sealed class Product : AggregateRoot
         Description = description;
         Price = price;
         Stock = stock;
+        UpdatedAt = DateTime.UtcNow;
 
         RaiseDomainEvent(new ProductUpdatedDomainEvent(this));
     }

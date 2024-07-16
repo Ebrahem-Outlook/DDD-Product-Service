@@ -4,8 +4,8 @@ namespace Products.Domain.Products.ValueObjects;
 
 public sealed class Name : ValueObject
 {
-    private const int MinLength = 5;
-    private const int MaxLength = 50;
+    public const int MinLength = 5;
+    public const int MaxLength = 50;
 
     private Name(string value) => Value = value;
 

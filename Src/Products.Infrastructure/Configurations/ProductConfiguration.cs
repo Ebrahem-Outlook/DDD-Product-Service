@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Products.Domain.Products;
+using Products.Domain.Products.ValueObjects;
 
 namespace Products.Infrastructure.Configurations;
 
@@ -10,16 +11,47 @@ internal sealed class ProductConfiguration : IEntityTypeConfiguration<Product>
     {
         builder.HasKey(p => p.Id);
 
-        builder.Property(p => p.Name).IsRequired().HasMaxLength(50);
+        builder.OwnsOne(product => product.Name, nameBuilder =>
+        {
+            nameBuilder.WithOwner();
 
-        builder.Property(p => p.Description).IsRequired().HasMaxLength(50);
+            nameBuilder.Property(name => name.Value)
+                .HasColumnName(nameof(Product.Name))
+                .HasMaxLength(Name.MaxLength)
+                .IsRequired();
+        });
 
-        builder.Property(p => p.Price).IsRequired().HasColumnType("decimal(18,2)");
+        builder.OwnsOne(product => product.Description, descriptionBuilder =>
+        {
+            descriptionBuilder.WithOwner();
 
-        builder.Property(p => p.Stock).IsRequired();
+            descriptionBuilder.Property(description => description.Value)
+                .HasColumnName(nameof(Product.Description))
+                .HasMaxLength(Description.MaxLenght)
+                .IsRequired();
+        });
 
-        builder.Property(p => p.CreatedAt).IsRequired();
+        builder.OwnsOne(product => product.Price, priceBuilder =>
+        {
+            priceBuilder.WithOwner();
 
-        builder.Property(p => p.UpdatedAt).IsRequired();
+            priceBuilder.Property(price => price.Value)
+                .HasColumnName(nameof(Product.Price))
+                .HasColumnType("decimal(18,2)")
+                .IsRequired();
+        });
+
+        builder.OwnsOne(product => product.Stock, stockBuilder =>
+        {
+            stockBuilder.WithOwner();
+
+            stockBuilder.Property(stock => stock.Value)
+                .HasColumnName(nameof(Product.Stock))
+                .IsRequired();
+        });
+
+        builder.Property(product => product.CreatedAt).IsRequired();
+
+        builder.Property(product => product.UpdatedAt);
     }
 }

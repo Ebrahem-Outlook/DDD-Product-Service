@@ -17,7 +17,7 @@ internal sealed class UpdateProductCommandHandler(IProductRepository repository)
 
         Result<Stock> stock = Stock.Create(request.Stock);
 
-
+        return Result.Success();
 
     }
 

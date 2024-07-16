@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Products.Application.Core.Abstractions.Data;
 using Products.Domain.Products;
+using Products.Infrastructure.Caching;
 using Products.Infrastructure.Database;
 using Products.Infrastructure.Repositories;
 
@@ -20,7 +22,18 @@ public static class DependencyInjection
 
         services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<AppDbContext>());
 
-        services.AddScoped<IProductRepository, ProductRepository>();
+
+        services.AddMemoryCache();
+
+        services.AddScoped<ProductRepository>();
+
+        services.AddScoped<IProductRepository>(serviceProvider =>
+        {
+            var decorated = serviceProvider.GetRequiredService<ProductRepository>();
+            var memoryCache = serviceProvider.GetRequiredService<IMemoryCache>();
+
+            return new CachedProductRepository(decorated, memoryCache);
+        });
 
         return services;
     }

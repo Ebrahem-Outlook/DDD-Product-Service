@@ -33,6 +33,6 @@ internal sealed class ProductRepository(IDbContext dbContext) : IProductReposito
 
     public async Task<List<Product>?> GetByNameAsync(string name, CancellationToken cancellationToken = default)
     {
-        return await dbContext.Set<Product>().Where(u => u.Name == name).ToListAsync(cancellationToken);
+        return await dbContext.Set<Product>().Where(u => u.Name.Value == name).ToListAsync(cancellationToken);
     }
 }
