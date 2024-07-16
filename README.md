@@ -3,7 +3,8 @@
 </p>
 
 <p align="center">
-  <img src="https://www.istockphoto.com/photo/a-camel-sits-on-the-sand-on-a-beach-in-egypt-gm1497682101-519968128?utm_campaign=srp_photos_bottom&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fproduct-service-egypt&utm_medium=affiliate&utm_source=unsplash&utm_term=product+service+egypt%3A%3A%3A" alt="Project Banner">
+  <img src="![image](https://github.com/user-attachments/assets/fe00d33d-e09a-49e6-9a4a-ddfda3a282d3)
+" alt="Project Banner">
 </p>
 
 ## Table of Contents
