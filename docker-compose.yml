@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  products.api:
+    image: ${DOCKER_REGISTRY-}productsapi
+    build:
+      context: .
+      dockerfile: Src/Products.API/Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Docker-Postgres=Host=postgres;Database=DDD-Product-Service_DB;Username=Ebrahem_Outlook;Password=Ebrahem0123*#
+      - Redis__ConnectionString=redis:2525
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: Ebrahem_Outlook
+      POSTGRES_PASSWORD: Ebrahem0123*#
+      POSTGRES_DB: DDD-Product-Service_DB
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "2525:6379"
+
+volumes:
+  postgres_data:
