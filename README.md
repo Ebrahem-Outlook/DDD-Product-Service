@@ -6,7 +6,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 <p align="center">
-  <img src="[https://images.unsplash.com/photo-1581092580340-b849e4e18eeb](https://unsplash.com/photos/flatlay-photography-of-wireless-headphones-PDX_a_82obo)" alt="Project Banner" width="800" height="400">
+  <img src="https://unsplash.com/photos/white-corded-headphones-7LNatQYMzm4" alt="Project Banner">
 </p>
 
 ## Table of Contents
@@ -26,7 +26,7 @@
 Welcome to the **DDD Product Service**! This project showcases the implementation of a product service using Domain-Driven Design (DDD) principles. It's designed to demonstrate best practices in building resilient, scalable, and maintainable systems with C# and the .NET ecosystem.
 
 <p align="center">
-  <img src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5" alt="Introduction Image" width="600" height="300">
+  <img src="https://unsplash.com/photos/round-white-watch-with-white-band-2cFZ_FB08UM" alt="Introduction Image">
 </p>
 
 ## Features ✨
@@ -91,7 +91,7 @@ Welcome to the **DDD Product Service**! This project showcases the implementatio
     ```
 
 <p align="center">
-  <img src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5" alt="Setup Image" width="600" height="300">
+  <img src="https://unsplash.com/photos/brown-building-QveJH1hA2sI" alt="Setup Image">
 </p>
 
 ## Usage 📦
@@ -101,18 +101,3 @@ Welcome to the **DDD Product Service**! This project showcases the implementatio
 To run the tests, use the following command:
 ```bash
 dotnet test
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5" alt="Tests Image" width="600" height="300">
-</p>
-Contributing 🤝
-Contributions are welcome! Please read the contributing guidelines for more details.
-
-License 📄
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Contact 📬
-Ebrahem Mohamed - LinkedIn - Email
-
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5" alt="Contact Image" width="600" height="300">
-</p>
