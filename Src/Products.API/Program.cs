@@ -1,4 +1,5 @@
 using Products.Infrastructure;
+using Products.Application;
 
 namespace Products.API;
 
@@ -10,7 +11,8 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllers();
-        builder.Services.AddInfrastructure(builder.Configuration);
+        builder.Services.AddApplicationService();
+        builder.Services.AddInfrastructureService(builder.Configuration);
 
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

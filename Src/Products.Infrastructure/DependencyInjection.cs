@@ -12,7 +12,7 @@ namespace Products.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInfrastructureService(this IServiceCollection services, IConfiguration configuration)
     {
         string? ConnectionString = configuration.GetConnectionString("Local-SqlServer");
 
