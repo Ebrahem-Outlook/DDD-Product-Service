@@ -27,7 +27,7 @@ internal sealed class ProductConfiguration : IEntityTypeConfiguration<Product>
 
             descriptionBuilder.Property(description => description.Value)
                 .HasColumnName(nameof(Product.Description))
-                .HasMaxLength(Description.MaxLenght)
+                .HasMaxLength(Description.MaxLength)
                 .IsRequired();
         });
 

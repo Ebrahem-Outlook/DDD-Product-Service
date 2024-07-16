@@ -1,4 +1,6 @@
 ﻿using Products.Domain.Core.BaseType;
+using Products.Domain.Core.BaseType.Result;
+using Products.Domain.Core.Errors;
 
 namespace Products.Domain.Products.ValueObjects;
 
@@ -8,15 +10,10 @@ public sealed class Price : ValueObject
     
     public decimal Value { get; }
 
-    public static Price Create(decimal value)
-    {
-        if (value <= 0)
-        {
-            throw new ArgumentException();
-        }
-
-        return new Price(value);
-    }
+    public static Result<Price> Create(decimal price) =>
+        Result.Create(price, DomainErrors.Price.InValidPrice)
+            .Ensure(p => p <= 0, DomainErrors.Price.InValidPrice)
+            .Map(p => new Price(p));
 
     protected override IEnumerable<object> GetEqualityComponents()
     {

@@ -15,13 +15,13 @@ public static class DependencyInjection
         {
             cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
 
-            cfg.AddOpenBehavior(typeof(ExceptionHandlingBehavior<,>));
-
-            cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
+            cfg.AddOpenBehavior(typeof(LoggingBehavior<,>));
 
             cfg.AddOpenBehavior(typeof(TransactionBehavior<,>));
 
-            cfg.AddOpenBehavior(typeof(LoggingBehavior<,>));
+            cfg.AddOpenBehavior(typeof(ExceptionHandlingBehavior<,>));
+
+            cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
         });
 
         return services;
