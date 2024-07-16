@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Products.Domain.Core.Events;
+using Products.Domain.Products.Events;
 
-namespace Products.Application.Products.Events.ProductCreated
+namespace Products.Application.Products.Events.ProductCreated;
+
+internal class PublishProductCreatedIntegrationEventOnDomainEventHandler : IDomainEventHandler<ProductCreatedDomainEvent>
 {
-    internal class PublishProductCreatedIntegrationEventOnDomainEventHandler
+
+
+    public Task Handle(ProductCreatedDomainEvent notification, CancellationToken cancellationToken)
     {
+        throw new NotImplementedException();
     }
 }
