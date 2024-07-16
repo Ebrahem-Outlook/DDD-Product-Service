@@ -2,11 +2,8 @@
   <h1>DDD Product Service 🎉</h1>
 </p>
 
-
-
 <p align="center">
-  <img src="https://img.shields.io/badge/%20-Twitter-%231DA1F2?logo=twitter&logoColor=white&style=for-the-badge"/>
-  <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+  <img src="https://images.pexels.com/photos/3423860/pexels-photo-3423860.jpeg?auto=compress&cs=tinysrgb&w=600"/>
 </p>
 
 ## Table of Contents
