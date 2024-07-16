@@ -28,6 +28,13 @@ public static class DependencyInjection
         services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<AppDbContext>());
 
 
+        services.AddStackExchangeRedisCache(options =>
+        {
+            options.Configuration = configuration["Redis:ConnectionString"];
+        });
+
+        
+
         services.AddMemoryCache();
 
         services.AddScoped<ProductRepository>();
