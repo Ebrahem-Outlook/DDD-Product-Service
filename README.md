@@ -88,7 +88,7 @@ Welcome to the **DDD Product Service**! This project showcases the implementatio
     ```
 
 <p align="center">
-  <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSfcD_38AoGHdv2CzWzfTFlzZoIda6Hpglcy-QPMJICShCU1L8K"/>
+  <img src="https://designerapp.officeapps.live.com/designerapp/document.ashx?path=/8b72a13f-210f-4f9a-9218-07e459508d63/DallEGeneratedImages/dalle-6af1073b-6478-4f6b-b9e4-569bcb7432da0251681194812280030000.jpg&dcHint=WestEurope&fileToken=5eadfd88-5279-47c0-a1bd-75077323f4eb"/>
 </p>
 
 ## Usage 📦
@@ -96,7 +96,7 @@ Welcome to the **DDD Product Service**! This project showcases the implementatio
 ### Running Tests 🧪
 
 To run the tests, use the following command:
-```bash
+
 dotnet test
 <p align="center">
   <img src="https://via.placeholder.com/600x300.png?text=Tests+Image" alt="Tests Image">
