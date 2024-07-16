@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=Introduction+Image" alt="Introduction Image">
+  <img src="https://img.shields.io/badge/%20-Twitter-%231DA1F2?logo=twitter&logoColor=white&style=for-the-badge"/>
 </p>
 
 ## Table of Contents
