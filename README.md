@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="![image](https://github.com/user-attachments/assets/fe00d33d-e09a-49e6-9a4a-ddfda3a282d3)
+  <img src="https://github.com/user-attachments/assets/fe00d33d-e09a-49e6-9a4a-ddfda3a282d3
 " alt="Project Banner">
 </p>
 
