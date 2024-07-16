@@ -3,9 +3,8 @@
 </p>
 
 <p align="center">
-  <img src="[https://github.com/user-attachments/assets/fe00d33d-e09a-49e6-9a4a-ddfda3a282d3](https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1701878932176351232%2FAlNU3WTK_400x400.jpg&tbnid=m4jTjUiU2MzZXM&vet=12ahUKEwiBneCU1KqHAxWUTKQEHfLjAJkQMygNegUIARCDAQ..i&imgrefurl=https%3A%2F%2Ftwitter.com%2Fimg&docid=jespMEsnBIzqcM&w=300&h=300&q=img&ved=2ahUKEwiBneCU1KqHAxWUTKQEHfLjAJkQMygNegUIARCDAQ)" alt="Project Banner">
+  <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1701878932176351232%2FAlNU3WTK_400x400.jpg&tbnid=m4jTjUiU2MzZXM&vet=12ahUKEwiBneCU1KqHAxWUTKQEHfLjAJkQMygNegUIARCDAQ..i&imgrefurl=https%3A%2F%2Ftwitter.com%2Fimg&docid=jespMEsnBIzqcM&w=300&h=300&q=img&ved=2ahUKEwiBneCU1KqHAxWUTKQEHfLjAJkQMygNegUIARCDAQ" alt="Project Banner">
   <img src="https://via.placeholder.com/600x300.png?text=Introduction+Image" alt="Introduction Image">
-  "https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1701878932176351232%2FAlNU3WTK_400x400.jpg&tbnid=m4jTjUiU2MzZXM&vet=12ahUKEwiBneCU1KqHAxWUTKQEHfLjAJkQMygNegUIARCDAQ..i&imgrefurl=https%3A%2F%2Ftwitter.com%2Fimg&docid=jespMEsnBIzqcM&w=300&h=300&q=img&ved=2ahUKEwiBneCU1KqHAxWUTKQEHfLjAJkQMygNegUIARCDAQ"
 </p>
 
 ## Table of Contents
