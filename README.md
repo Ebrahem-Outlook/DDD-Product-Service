@@ -6,7 +6,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 <p align="center">
-  <img src="https://images.unsplash.com/photo-1581092580340-b849e4e18eeb" alt="Project Banner" width="800" height="400">
+  <img src="[https://images.unsplash.com/photo-1581092580340-b849e4e18eeb](https://unsplash.com/photos/flatlay-photography-of-wireless-headphones-PDX_a_82obo)" alt="Project Banner" width="800" height="400">
 </p>
 
 ## Table of Contents
