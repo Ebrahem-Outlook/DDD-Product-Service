@@ -45,6 +45,6 @@ public sealed class ProductsController(ISender sender) : ControllerBase
     [HttpGet("id")]
     public async Task<IActionResult> GetById(Guid id) => Ok(await sender.Send(new GetByIdProductQuery(id)));
 
-    [HttpPost("name")]
+    [HttpGet("name")]
     public async Task<IActionResult> GetByName(string name) => Ok(await sender.Send(new GetByNameQuery(name)));
 }

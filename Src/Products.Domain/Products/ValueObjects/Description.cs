@@ -1,4 +1,6 @@
 ﻿using Products.Domain.Core.BaseType;
+using Products.Domain.Core.BaseType.Result;
+using Products.Domain.Core.Errors;
 using System.Net.Http.Headers;
 
 namespace Products.Domain.Products.ValueObjects;
@@ -12,20 +14,9 @@ public sealed class Description : ValueObject
     
     public string Value { get; }
 
-    public static Description Create(string value)
-    {
-        if (string.IsNullOrWhiteSpace(value))
-        {
-            throw new ArgumentException();
-        }
-
-        if (value.Length > MaxLenght || value.Length < MinLength)
-        {
-            throw new ArgumentException();
-        }
-
-        return new Description(value);
-    }
+    public static Result<Description> Create(string value) =>
+        Result.Create(value, DomainErrors.Description.NullOrEmpty)
+              .Ensure(d => string.IsNullOrEmpty());
 
     protected override IEnumerable<object> GetEqualityComponents()
     {
