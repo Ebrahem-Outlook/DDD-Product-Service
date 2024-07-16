@@ -18,7 +18,7 @@ public sealed class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRe
 
         var response = await next();
 
-        if (response.IsFailer)
+        if (response.IsFailure)
         {
             _logger.LogError("Request Failure {@RequestName}, {@Error}, {@DateTime}", typeof(TRequest).Name, response.Error, DateTime.UtcNow);
         }

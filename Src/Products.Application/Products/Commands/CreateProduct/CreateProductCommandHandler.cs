@@ -17,9 +17,9 @@ internal sealed class CreateProductCommandHandler(IProductRepository repository)
 
         Result firstFailureOrSuccess = Result.FirstFailureOrSuccess(name, description, price, stock);
 
-        if (firstFailureOrSuccess.IsFailer)
+        if (firstFailureOrSuccess.IsFailure)
         {
-            return Result.Failer(firstFailureOrSuccess.Error);
+            return Result.Failure(firstFailureOrSuccess.Error);
         }
 
         Result<Product> product = Product.Create(name.Value, description.Value, price.Value, stock.Value);

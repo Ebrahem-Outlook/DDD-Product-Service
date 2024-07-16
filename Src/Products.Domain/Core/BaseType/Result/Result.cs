@@ -22,20 +22,20 @@ public class Result
 
     public bool IsSuccess { get; set; }
 
-    public bool IsFailer => !IsSuccess;
+    public bool IsFailure => !IsSuccess;
 
     public Error Error { get; set; }
 
     public static Result Success() => new Result(true, Error.None);
 
-    public static Result Failer(Error error) => new Result(false, error);
+    public static Result Failure(Error error) => new Result(false, error);
 
 
     public static Result<TValue> Success<TValue>(TValue value)
         => new Result<TValue>(value, true, Error.None);
 
-    public static Result<TValue> Failer<TValue>(TValue value, Error error)
-        => new Result<TValue>(value, false, error);
+    public static Result<TValue> Failure<TValue>(Error error)
+        => new Result<TValue>(default, false, error);
 
     public static Result<TValue> Create<TValue>(TValue value, Error error)
     {
@@ -51,7 +51,7 @@ public class Result
     {
         foreach (Result result in results)
         {
-            if (result.IsFailer)
+            if (result.IsFailure)
             {
                 return result;
             }

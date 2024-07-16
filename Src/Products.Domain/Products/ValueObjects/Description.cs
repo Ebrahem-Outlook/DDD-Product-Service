@@ -14,12 +14,14 @@ public sealed class Description : ValueObject
     
     public string Value { get; }
 
-    public static Result<Description> Create(string value) =>
-        Result.Create(value, DomainErrors.Description.NullOrEmpty)
-              .Ensure(d => string.IsNullOrEmpty());
+    public static Description Create(string value)
+    {
+        return new Description(value);
+    }
 
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
     }
 }
+ 

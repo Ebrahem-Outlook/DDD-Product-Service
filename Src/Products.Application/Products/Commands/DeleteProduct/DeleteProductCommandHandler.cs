@@ -13,9 +13,9 @@ internal sealed class DeleteProductCommandHandler(IProductRepository repository)
     {
         Result<Product?> product = await repository.GetByIdAsync(request.ProductId, cancellationToken);
 
-        if (product.IsFailer)
+        if (product.IsFailure)
         {
-            Result.Failer(product.Error);
+            Result.Failure(product.Error);
         }
 
         repository.Delete(product.Value);
