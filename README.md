@@ -2,8 +2,8 @@
   <h1>DDD Product Service 🎉</h1>
 </p>
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+[License](https://img.shields.io/badge/license-MIT-blue.svg)
+[Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 <p align="center">
   <img src="https://unsplash.com/photos/white-corded-headphones-7LNatQYMzm4" alt="Project Banner">
