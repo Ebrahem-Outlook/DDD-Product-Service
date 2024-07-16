@@ -1,3 +1,3 @@
 ﻿namespace Products.API.Contracts;
 
-public sealed record DeleteProductRequired(Guid ProductId);
+public sealed record DeleteProductRequest(Guid ProductId);

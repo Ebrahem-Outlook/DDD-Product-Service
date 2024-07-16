@@ -1,6 +1,6 @@
 ﻿namespace Products.API.Contracts;
 
-public sealed record UpdateProductRequired(
+public sealed record UpdateProductRequest(
     Guid Id, 
     string Name, 
     string Description, 
