@@ -1,8 +1,9 @@
 ﻿using MediatR;
+using Products.Domain.Core.BaseType.Result;
 
 namespace Products.Application.Core.Abstractions.Messaging;
 
-public interface ICommandHandler<TCommand> : IRequestHandler<TCommand>
+public interface ICommandHandler<in TCommand> : IRequestHandler<TCommand, Result>
     where TCommand : ICommand
 {
 
@@ -10,7 +11,7 @@ public interface ICommandHandler<TCommand> : IRequestHandler<TCommand>
 
 public interface ICommandHandler<in TCommand, TResponse> : IRequestHandler<TCommand, TResponse>
     where TCommand : ICommand<TResponse>
-    where TResponse : class
+    where TResponse : Result<TResponse>
 {
 
 }
